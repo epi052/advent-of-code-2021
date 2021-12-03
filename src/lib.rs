@@ -23,8 +23,5 @@ pub fn get_input(filename: &str) -> String {
 
     let input_path = format!("src/inputs/input-{}", current_day);
 
-    read_to_string(input_path).expect(&format!(
-        "couldn't read input file from src/inputs/input-{}",
-        current_day
-    ))
+    read_to_string(input_path).expect("couldn't read input file")
 }
