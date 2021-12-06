@@ -6,4 +6,4 @@ if [[ "${#}" != 1 ]]; then
 fi
 
 day="${1}"
-cp template.rs src/bin/day-$day.rs
+cp -i template.rs src/bin/day-$day.rs

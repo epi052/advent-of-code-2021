@@ -25,3 +25,9 @@ pub fn get_input(filename: &str) -> String {
 
     read_to_string(input_path).expect("couldn't read input file")
 }
+
+#[derive(Copy, Clone, Debug, PartialEq)]
+pub enum Solver {
+    PartOne,
+    PartTwo,
+}
