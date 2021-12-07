@@ -1,4 +1,4 @@
-use advent_of_code_2021::{get_input, parse_args, Solver};
+use advent_of_code_2021::{get_input, parse_args};
 
 #[derive(Clone, Debug, Default)]
 struct Model {
@@ -69,7 +69,7 @@ fn part_two(input: &str) -> usize {
         model[fish_on_day] += 1;
     });
 
-    (0..256).for_each(|i| {
+    (0..256).for_each(|_| {
         // rotate left by 1 is equivalent to decrementing each fish's timer by 1
         model.rotate_left(1);
 
