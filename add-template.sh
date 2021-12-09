@@ -7,3 +7,4 @@ fi
 
 day="${1}"
 cp -i template.rs src/bin/day-$day.rs
+touch src/inputs/input-$day
