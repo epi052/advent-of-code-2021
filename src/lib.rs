@@ -18,8 +18,10 @@ pub fn parse_args() -> AoCArgParser {
 /// read input file from src/inputs based on current file's filename
 pub fn get_input(filename: &str) -> String {
     let this_file = Path::new(filename);
-    let stem = this_file.file_stem().unwrap().to_str().unwrap();
-    let current_day = &stem[4..5];
+    let mut stem = this_file.file_stem().unwrap().to_str().unwrap().split('-');
+
+    stem.next().unwrap(); // discard 'day'
+    let current_day = stem.next().unwrap();
 
     let input_path = format!("src/inputs/input-{}", current_day);
 
